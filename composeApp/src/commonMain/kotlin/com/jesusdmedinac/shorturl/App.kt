@@ -1,9 +1,9 @@
-package com.jetbrains.kmpapp
+package com.jesusdmedinac.shorturl
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import cafe.adriel.voyager.navigator.Navigator
-import com.jetbrains.kmpapp.shorturl.presentation.ui.screen.ShortURLScreen
+import com.jesusdmedinac.shorturl.presentation.ui.screen.ShortURLScreen
 
 @Composable
 fun App() {

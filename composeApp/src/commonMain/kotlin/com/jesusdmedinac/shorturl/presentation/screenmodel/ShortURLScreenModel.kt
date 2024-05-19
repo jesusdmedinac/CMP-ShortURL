@@ -1,4 +1,4 @@
-package com.jetbrains.kmpapp.shorturl.presentation.screenmodel
+package com.jesusdmedinac.shorturl.presentation.screenmodel
 
 import cafe.adriel.voyager.core.model.ScreenModel
 import cafe.adriel.voyager.core.model.screenModelScope

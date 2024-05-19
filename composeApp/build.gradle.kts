@@ -57,7 +57,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.jetbrains.kmpapp"
+    namespace = "com.jesusdmedinac.shorturl"
     compileSdk = 34
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
@@ -65,7 +65,7 @@ android {
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
-        applicationId = "com.jetbrains.kmpapp"
+        applicationId = "com.jesusdmedinac.shorturl"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
