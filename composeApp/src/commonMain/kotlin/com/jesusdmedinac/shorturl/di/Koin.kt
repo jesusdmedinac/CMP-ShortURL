@@ -1,5 +1,6 @@
-package com.jetbrains.kmpapp.di
+package com.jesusdmedinac.shorturl.di
 
+import com.jesusdmedinac.shorturl.data.URLRepository
 import com.jetbrains.kmpapp.data.InMemoryMuseumStorage
 import com.jetbrains.kmpapp.data.KtorMuseumApi
 import com.jetbrains.kmpapp.data.MuseumApi
@@ -18,6 +19,7 @@ import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module
 
 val dataModule = module {
+    single { URLRepository() }
     single {
         val json = Json { ignoreUnknownKeys = true }
         HttpClient {

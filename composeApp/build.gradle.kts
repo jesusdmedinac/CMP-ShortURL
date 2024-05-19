@@ -1,8 +1,12 @@
+import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.kotlinxSerialization)
+    id("com.codingfeline.buildkonfig")
 }
 
 kotlin {
@@ -52,6 +56,10 @@ kotlin {
             implementation(libs.voyager.koin)
 
             implementation(libs.orbit.mvi)
+
+            implementation(libs.firebase.firestore)
+
+            implementation(libs.kotlinx.datetime)
         }
     }
 }
@@ -87,5 +95,15 @@ android {
     }
     dependencies {
         debugImplementation(libs.androidx.compose.ui.tooling)
+    }
+}
+
+buildkonfig {
+    packageName = "com.jesusdmedinac.shorturl"
+
+    defaultConfigs {
+        buildConfigField(STRING, "applicationId", gradleLocalProperties(rootDir).getProperty("applicationId"))
+        buildConfigField(STRING, "apiKey", gradleLocalProperties(rootDir).getProperty("apiKey"))
+        buildConfigField(STRING, "projectId", gradleLocalProperties(rootDir).getProperty("projectId"))
     }
 }
